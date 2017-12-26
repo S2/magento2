@@ -152,7 +152,9 @@ class AbstractCollection extends \Magento\Eav\Model\Entity\Collection\AbstractCo
 
         $entityTable = $this->getEntity()->getEntityTable();
         $indexList = $connection->getIndexList($entityTable);
-        $entityIdField = $indexList[$connection->getPrimaryKeyName($entityTable)]['COLUMNS_LIST'][0];
+        $entityIdField = isset($indexList[$connection->getPrimaryKeyName($entityTable)])
+            ? $indexList[$connection->getPrimaryKeyName($entityTable)]['COLUMNS_LIST'][0]
+            : "entity_id";
 
         if ($storeId) {
             $joinCondition = [

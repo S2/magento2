@@ -93,7 +93,9 @@ class EntityMetadata implements EntityMetadataInterface
     {
         $connection = $this->resourceConnection->getConnectionByName($this->getEntityConnectionName());
         $indexList = $connection->getIndexList($this->getEntityTable());
-        return $indexList[$connection->getPrimaryKeyName($this->getEntityTable())]['COLUMNS_LIST'][0];
+        return isset($indexList[$connection->getPrimaryKeyName($this->getEntityTable())]) 
+            ? $indexList[$connection->getPrimaryKeyName($this->getEntityTable())]['COLUMNS_LIST'][0]
+            : "entity_id";
     }
 
     /**

@@ -242,6 +242,17 @@ class IndexBuilder
      */
     public function reindexByIds(array $ids)
     {
+        $bt = debug_backtrace(10);
+        $btCount = 0;
+        foreach($bt as $b){
+            error_log($b['file'] . "<br>");
+            error_log($b['line'] . "<br>");
+            error_log($b['function'] . "<br><br><br>");
+            $btCount ++;
+            if($btCount > 10){
+                break;
+            }
+        }
         try {
             $this->doReindexByIds($ids);
         } catch (\Exception $e) {

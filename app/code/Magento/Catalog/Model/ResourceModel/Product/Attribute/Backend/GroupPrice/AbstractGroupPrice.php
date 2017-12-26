@@ -67,7 +67,9 @@ abstract class AbstractGroupPrice extends \Magento\Framework\Model\ResourceModel
     {
         $table = $this->getTable('catalog_product_entity');
         $indexList = $this->getConnection()->getIndexList($table);
-        return $indexList[$this->getConnection()->getPrimaryKeyName($table)]['COLUMNS_LIST'][0];
+        return isset($indexList[$this->getConnection()->getPrimaryKeyName($table)]) 
+            ? $indexList[$this->getConnection()->getPrimaryKeyName($table)]['COLUMNS_LIST'][0]
+            : "entity_id";
     }
 
     /**
