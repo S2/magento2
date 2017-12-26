@@ -3894,6 +3894,9 @@ class Mysql extends \Zend_Db_Adapter_Pdo_Mysql implements AdapterInterface
     {
         $indexName = $this->getPrimaryKeyName($tableName, $schemaName);
         $indexes = $this->getIndexList($tableName);
+        if(!isset($indexes[$indexName])){
+            return "entity_id";
+        }
         if ($indexName && count($indexes[$indexName]['COLUMNS_LIST']) == 1) {
             return current($indexes[$indexName]['COLUMNS_LIST']);
         }

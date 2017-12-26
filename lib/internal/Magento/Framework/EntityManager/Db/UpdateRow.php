@@ -87,6 +87,14 @@ class UpdateRow
         $indexList = $connection->getIndexList($metadata->getEntityTable());
         $primaryKeyName = $connection->getPrimaryKeyName($metadata->getEntityTable());
 
+        if(!isset($indexList[$primaryKeyName])){
+            $indexList[$primaryKeyName] = [
+                'COLUMNS_LIST' => [
+                    "entity_id"
+                ]
+            ];
+        }
+
         foreach ($indexList[$primaryKeyName]['COLUMNS_LIST'] as $linkField) {
             if (isset($data[$linkField])) {
                 $conditions[$linkField . ' = ?'] = $data[$linkField];

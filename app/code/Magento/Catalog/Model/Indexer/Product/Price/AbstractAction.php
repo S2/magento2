@@ -520,7 +520,9 @@ abstract class AbstractAction
     {
         $table = $this->_defaultIndexerResource->getTable('catalog_product_entity');
         $indexList = $this->_connection->getIndexList($table);
-        return $indexList[$this->_connection->getPrimaryKeyName($table)]['COLUMNS_LIST'][0];
+        return isset($indexList[$this->_connection->getPrimaryKeyName($table)]) 
+            ? $indexList[$this->_connection->getPrimaryKeyName($table)]['COLUMNS_LIST'][0]
+            : "entity_id";
     }
 
     /**
