@@ -209,6 +209,19 @@ class InstallSchema implements InstallSchemaInterface
             $installer->getTable('store_website'),
             'website_id',
             \Magento\Framework\DB\Ddl\Table::ACTION_SET_NULL
+        )->addColumn(
+            'firstnamekana',
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            255,
+            [],
+            'First Name Kana'
+        )->addColumn(
+            'lastnamekana',
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            255,
+            [],
+            'Last Name Kana'
+
         )->setComment(
             'Customer Entity'
         );

@@ -56,6 +56,16 @@
                 <aspect name="create" />
                 <aspect name="update" />
             </field>
+            <field name="firstnamekana">
+                <aspect name="create" />
+                <aspect name="update" />
+                <aspect name="name" />
+            </field>
+            <field name="lastnamekana">
+                <aspect name="create" />
+                <aspect name="update" />
+                <aspect name="name" />
+            </field>
         </fieldset>
         <fieldset id="customer_address">
             <field name="vat_id">

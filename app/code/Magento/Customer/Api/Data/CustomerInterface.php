@@ -36,6 +36,8 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
     const DEFAULT_SHIPPING = 'default_shipping';
     const KEY_ADDRESSES = 'addresses';
     const DISABLE_AUTO_GROUP_CHANGE = 'disable_auto_group_change';
+    const FIRSTNAMEKANA = 'firstnamekana';
+    const LASTNAMEKANA = 'lastnamekana';
     /**#@-*/
 
     /**
@@ -367,4 +369,35 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
      * @return $this
      */
     public function setExtensionAttributes(\Magento\Customer\Api\Data\CustomerExtensionInterface $extensionAttributes);
+
+    /**
+     * Get first name kana
+     *
+     * @return string
+     */
+    public function getFirstnamekana();
+
+    /**
+     * Set first name kana
+     *
+     * @param string $firstnamekana
+     * @return $this
+     */
+    public function setFirstnamekana($firstnamekana);
+
+    /**
+     * Get last name kana
+     *
+     * @return string
+     */
+    public function getLastnamekana();
+
+    /**
+     * Set last name kana
+     *
+     * @param string $lastnamekana
+     * @return $this
+     */
+    public function setLastnamekana($lastnamekana);
+
 }

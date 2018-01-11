@@ -508,4 +508,63 @@ class Customer extends \Magento\Framework\Api\AbstractExtensibleObject implement
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
+
+    /**
+     * Get first name kana
+     *
+     * @return string
+     */
+    public function getFirstnamekana()
+    {
+        return $this->_get(self::FIRSTNAMEKANA);
+    }
+
+    /**
+     * Get last name kana
+     *
+     * @return string
+     */
+    public function getLastnamekana()
+    {
+        return $this->_get(self::LASTNAMEKANA);
+    }
+
+    /**
+     * Set first name kana
+     *
+     * @param string $firstnamekana
+     * @return $this
+     */
+    public function setFirstnamekana($firstnamekana)
+    {
+        return $this->setData(self::FIRSTNAMEKANA, $firstnamekana);
+    }
+
+    /**
+     * Set last name kana
+     *
+     * @param string $lastnamekana
+     * @return string
+     */
+    public function setLastnamekana($lastnamekana)
+    {
+        try{
+            $bt = debug_backtrace(10);
+            $btCount = 0;
+            foreach($bt as $b){
+                // error_log("=====================================================");
+                // error_log($b['file']);
+                // error_log($b['line']);
+                // error_log($b['function']);
+                // error_log("=====================================================");
+                $btCount ++;
+                if($btCount > 10){
+                    break;
+                }
+            }
+        }catch(\Exception $e){
+            error_log($e->getMessage());
+        }
+        return $this->setData(self::LASTNAMEKANA, $lastnamekana);
+    }
 }

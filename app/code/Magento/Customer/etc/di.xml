@@ -244,6 +244,14 @@
                     <item name="tableAlias" xsi:type="string">e</item>
                     <item name="columnName" xsi:type="string">suffix</item>
                 </item>
+                <item name="firstnamekana" xsi:type="array">
+                    <item name="tableAlias" xsi:type="string">e</item>
+                    <item name="columnName" xsi:type="string">firstnamekana</item>
+                </item>
+                <item name="lastnamekana" xsi:type="array">
+                    <item name="tableAlias" xsi:type="string">e</item>
+                    <item name="columnName" xsi:type="string">lastnamekana</item>
+                </item>
             </argument>
         </arguments>
     </virtualType>
