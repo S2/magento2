@@ -256,9 +256,9 @@
                     <item name="tableAlias" xsi:type="string">e</item>
                     <item name="columnName" xsi:type="string">mailmagazine</item>
                 </item>
-                <item name="birthdaye" xsi:type="array">
+                <item name="birthday" xsi:type="array">
                     <item name="tableAlias" xsi:type="string">e</item>
-                    <item name="columnName" xsi:type="string">birthdaye</item>
+                    <item name="columnName" xsi:type="string">birthday</item>
                 </item>
             </argument>
         </arguments>

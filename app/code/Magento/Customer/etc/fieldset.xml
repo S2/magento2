@@ -71,7 +71,7 @@
                 <aspect name="update" />
                 <aspect name="name" />
             </field>
-            <field name="birthdaye">
+            <field name="birthday">
                 <aspect name="create" />
                 <aspect name="update" />
                 <aspect name="name" />
