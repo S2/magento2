@@ -567,4 +567,25 @@ class Customer extends \Magento\Framework\Api\AbstractExtensibleObject implement
         }
         return $this->setData(self::LASTNAMEKANA, $lastnamekana);
     }
+
+    /**
+     * Get first name kana
+     *
+     * @return string
+     */
+    public function getMailmagazine()
+    {
+        return $this->_get(self::MAILMAGAZINE);
+    }
+
+    /**
+     * Set first name kana
+     *
+     * @param string $mailmagazine
+     * @return $this
+     */
+    public function setMailmagazine($mailmagazine)
+    {
+        return $this->setData(self::MAILMAGAZINE, $mailmagazine);
+    }
 }

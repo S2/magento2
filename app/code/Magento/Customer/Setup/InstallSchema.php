@@ -221,6 +221,12 @@ class InstallSchema implements InstallSchemaInterface
             255,
             [],
             'Last Name Kana'
+        )->addColumn(
+            'mailmagazine',
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            255,
+            [],
+            'Mail Magazine'
 
         )->setComment(
             'Customer Entity'

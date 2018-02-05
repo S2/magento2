@@ -66,6 +66,11 @@
                 <aspect name="update" />
                 <aspect name="name" />
             </field>
+            <field name="mailmagazine">
+                <aspect name="create" />
+                <aspect name="update" />
+                <aspect name="name" />
+            </field>
         </fieldset>
         <fieldset id="customer_address">
             <field name="vat_id">

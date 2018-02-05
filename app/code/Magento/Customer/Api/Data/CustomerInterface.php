@@ -38,6 +38,7 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
     const DISABLE_AUTO_GROUP_CHANGE = 'disable_auto_group_change';
     const FIRSTNAMEKANA = 'firstnamekana';
     const LASTNAMEKANA = 'lastnamekana';
+    const MAILMAGAZINE = 'mailmagazine';
     /**#@-*/
 
     /**
@@ -399,5 +400,20 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
      * @return $this
      */
     public function setLastnamekana($lastnamekana);
+
+    /**
+     * Get first name kana
+     *
+     * @return string
+     */
+    public function getMailmagazine();
+
+    /**
+     * Set first name kana
+     *
+     * @param string $mailmagazine
+     * @return $this
+     */
+    public function setMailmagazine($mailmagazine);
 
 }

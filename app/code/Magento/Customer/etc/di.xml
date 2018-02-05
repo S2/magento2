@@ -252,6 +252,10 @@
                     <item name="tableAlias" xsi:type="string">e</item>
                     <item name="columnName" xsi:type="string">lastnamekana</item>
                 </item>
+                <item name="mailmagazine" xsi:type="array">
+                    <item name="tableAlias" xsi:type="string">e</item>
+                    <item name="columnName" xsi:type="string">mailmagazine</item>
+                </item>
             </argument>
         </arguments>
     </virtualType>
