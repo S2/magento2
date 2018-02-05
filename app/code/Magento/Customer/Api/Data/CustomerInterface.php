@@ -416,4 +416,19 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
      */
     public function setMailmagazine($mailmagazine);
 
+    /**
+     * Get birthday
+     *
+     * @return string
+     */
+    public function getBirthday();
+
+    /**
+     * Set birthday
+     *
+     * @param string $birthday
+     * @return $this
+     */
+    public function setBirthday($birthday);
+
 }

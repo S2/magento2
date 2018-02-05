@@ -588,4 +588,25 @@ class Customer extends \Magento\Framework\Api\AbstractExtensibleObject implement
     {
         return $this->setData(self::MAILMAGAZINE, $mailmagazine);
     }
+
+    /**
+     * Get birthday 
+     *
+     * @return string
+     */
+    public function getBirthday()
+    {
+        return $this->_get(self::BIRTHDAY);
+    }
+
+    /**
+     * Set birthday
+     *
+     * @param string $birthday
+     * @return $this
+     */
+    public function setBirthday($birthday)
+    {
+        return $this->setData(self::BIRTHDAY , $birthday);
+    }
 }
