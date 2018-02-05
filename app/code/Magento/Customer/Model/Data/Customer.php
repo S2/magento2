@@ -569,7 +569,7 @@ class Customer extends \Magento\Framework\Api\AbstractExtensibleObject implement
     }
 
     /**
-     * Get first name kana
+     * Get mail magazine
      *
      * @return string
      */
@@ -579,7 +579,7 @@ class Customer extends \Magento\Framework\Api\AbstractExtensibleObject implement
     }
 
     /**
-     * Set first name kana
+     * Set mail magazine
      *
      * @param string $mailmagazine
      * @return $this

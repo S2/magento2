@@ -402,14 +402,14 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
     public function setLastnamekana($lastnamekana);
 
     /**
-     * Get first name kana
+     * Get mail magazine
      *
      * @return string
      */
     public function getMailmagazine();
 
     /**
-     * Set first name kana
+     * Set mail magazine
      *
      * @param string $mailmagazine
      * @return $this
