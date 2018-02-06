@@ -39,6 +39,7 @@ interface CustomerInterface extends \Magento\Framework\Api\CustomAttributesDataI
     const FIRSTNAMEKANA = 'firstnamekana';
     const LASTNAMEKANA = 'lastnamekana';
     const MAILMAGAZINE = 'mailmagazine';
+    const BIRTHDAY = 'birthday';
     /**#@-*/
 
     /**
